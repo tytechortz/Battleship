@@ -7,3 +7,9 @@ for(let y = 1; y < 12; y++){
         $(`.game-column-${y}`).append(gameSquare)
     }
 }
+
+const letters = ['J','I','H','G','F','E','D','C','B','A'];
+
+for(let i=0; i<letters.length; i++) {
+    $(`.square-1-${i+1}`).text(letters[i]);
+}
