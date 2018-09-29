@@ -4,9 +4,10 @@
     background-color: lightblue;
     margin: 1px;
     border: 1px;
-    border-color: black
+    border-color: black;
+    text-align: center;
 }
 
-.game {
-    border: 2px;
+.col-sm {
+    width: 100px;
 }

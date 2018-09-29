@@ -17,6 +17,7 @@ for(let i=0; i<letters.length; i++) {
     $(`.square-1-${i+1}`).text(letters[i]);
 }
 
+//adds numbers to columns
 for(let j=0; j<nums.length; j++) {
     $(`.square-${j+2}-11`).text(nums[j]);
 }
