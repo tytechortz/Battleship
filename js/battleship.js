@@ -9,7 +9,17 @@ for(let y = 1; y < 12; y++){
 }
 
 const letters = ['J','I','H','G','F','E','D','C','B','A'];
+const nums = ['1','2','3','4','5','6','7','8','9','10'];
 
+
+//adds letters to board rows
 for(let i=0; i<letters.length; i++) {
     $(`.square-1-${i+1}`).text(letters[i]);
 }
+
+for(let j=0; j<nums.length; j++) {
+    $(`.square-${j+2}-11`).text(nums[j]);
+}
+
+
+
