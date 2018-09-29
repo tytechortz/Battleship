@@ -11,5 +11,5 @@ Basically, the normal battelship game
 Still thinking about what else I can add to the game
   
 
-![wireframe](wireframe.jpg)
+![wireframe](images/wireframe.jpg)
 
