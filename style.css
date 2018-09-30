@@ -11,3 +11,7 @@
 .col-sm {
     width: 100px;
 }
+
+.btn .btn-secondary {
+    color: rgb(48, 29, 218);
+}

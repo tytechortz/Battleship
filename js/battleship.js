@@ -17,10 +17,19 @@ for(let i=0; i<letters.length; i++) {
     $(`.square-1-${i+1}`).text(letters[i]);
 }
 
-//adds numbers to columns
+//adds numbers to board columns
 for(let j=0; j<nums.length; j++) {
     $(`.square-${j+2}-11`).text(nums[j]);
 }
 
+$(".position").droppable({
+    hoverClass: "ui-state-active",
+    drop: function( event, ui ) {
+        $( this )
+            .addClass( "ui-state-highlight" )
+            .find( "p" )
+                .html( "Dropped!" );
+    }
+});
 
-
+ 
