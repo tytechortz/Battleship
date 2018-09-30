@@ -22,6 +22,16 @@ for(let j=0; j<nums.length; j++) {
     $(`.square-${j+2}-11`).text(nums[j]);
 }
 
+var rotation = 0;
 
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                 '-moz-transform' : 'rotate('+ degrees +'deg)',
+                 '-ms-transform' : 'rotate('+ degrees +'deg)',
+                 'transform' : 'rotate('+ degrees +'deg)'});
+};
 
- 
+$('.rotate').click(function() {
+    rotation += 90;
+    $(this).rotate(rotation);
+});
