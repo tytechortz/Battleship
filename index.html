@@ -11,8 +11,13 @@
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <style>
-        .draggable { width: 40px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
-        .ui-widget-header p, .ui-widget-content p { margin: 0; }
+        #draggable1 { width: 84px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
+        #draggable2 { width: 126px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
+        #draggable3 { width: 168px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
+        #draggable4 { width: 210px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
+        #draggable5 { width: 210px; height: 40px; padding: 5px; float: left; margin:0; font-size: .9em; }
+
+        .ui-widget-content  { margin: 0; }
         #snaptarget { height: 14px; }
         
     </style>
@@ -22,24 +27,40 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
     $(function() {
-      $("#draggable4" ).draggable({ grid: [42,42], containment: "#droppable" });
+      $("#draggable1" ).draggable({ grid: [42,41.08], containment: "#droppable" });
+      $("#draggable2" ).draggable({ grid: [42,41.09], containment: "#droppable" });
+      $("#draggable3" ).draggable({ grid: [42,41.09], containment: "#droppable" });
+      $("#draggable4" ).draggable({ grid: [42,41.09], containment: "#droppable" });
+      $("#draggable5" ).draggable({ grid: [42,41.09], containment: "#droppable" });
     } );
     </script>
 </head>
 <body>
-        <div class="container">
-                <div class="row justify-content-between">
-                  
-                  <div id="droppable" class="row game position col-{breakpoint}-auto">
-                    </div>
-                  <div class="col-sm">
-                        <div id="draggable4" class="draggable ui-widget-content">
-                            <p>snap</p>
-                          </div>           
+      <div class="container">
+        <div class="row justify-content-between">
+          
+          <div id="droppable" class="row game position col-{breakpoint}-auto">
+            </div>
+          <div class="col-sm">
+                <div id="draggable1" class="draggable ui-widget-content">
+                    <!-- <p>snap</p> -->
+                  </div> 
+                <div id="draggable2" class="draggable ui-widget-content">
+                    <!-- <p>snap</p> -->
                   </div>
-                  <div class="row game col-{breakpoint}-auto">
-                    </div>
-        </div>
+                <div id="draggable3" class="draggable ui-widget-content">
+                    <!-- <p>snap</p> -->
+                  </div> 
+                <div id="draggable4" class="draggable ui-widget-content">
+                    <!-- <p>snap</p> -->
+                  </div>
+                <div id="draggable5" class="draggable ui-widget-content">
+                    <!-- <p>snap</p> -->
+                  </div>                
+          </div>
+          <div class="row game col-{breakpoint}-auto">
+            </div>
+      </div>
 
          <div class="mx-auto" style="width: 200px;">
                     <img src="images/smoke.gif"> 
@@ -78,3 +99,7 @@
     <script src="js/battleship.js"></script>
 </body>
 </html>
+
+<!-- <div id="draggable1" class="draggable ui-widget-content">
+    <p>snap</p>
+    </div> -->

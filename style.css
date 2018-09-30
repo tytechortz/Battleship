@@ -8,10 +8,28 @@
     text-align: center;
 }
 
-.col-sm {
+/* .col-sm {
     width: 100px;
-}
+} */
 
 .btn .btn-secondary {
     color: rgb(48, 29, 218);
 }
+
+#draggable1 {
+    background-color: black;
+}
+
+#draggable2 {
+    background-color: blue;
+}
+#draggable3 {
+    background-color: red;
+}
+#draggable4 {
+    background-color: green;
+}
+#draggable5 {
+    background-color: violet;
+}
+

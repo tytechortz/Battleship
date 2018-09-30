@@ -22,14 +22,6 @@ for(let j=0; j<nums.length; j++) {
     $(`.square-${j+2}-11`).text(nums[j]);
 }
 
-$(".position").droppable({
-    hoverClass: "ui-state-active",
-    drop: function( event, ui ) {
-        $( this )
-            .addClass( "ui-state-highlight" )
-            .find( "p" )
-                .html( "Dropped!" );
-    }
-});
+
 
  
