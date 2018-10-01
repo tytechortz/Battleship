@@ -1,4 +1,4 @@
-for(let y = 0; y < 11; y++){
+for(let y = 0; y < 12; y++){
     if (y > 0) {
         $('.game').append(`<div class='game-column game-column-${y}'></div>`)
     } else {
@@ -6,12 +6,12 @@ for(let y = 0; y < 11; y++){
     }
     
     for(let x = 0; x < 11; x++){
-        const gameSquare = $(`<div>${y},${x}</div>`)
+        const gameSquare = $(`<div>${x},${y-1}</div>`)
         gameSquare.addClass('square')
-        gameSquare.addClass('square')
-        if (x > 0) {
+        gameSquare.addClass(`square-${y-1}-${x}`)
+        if (x < 10) {
             gameSquare.click(function() {
-            board[x-1, y-1].hit = true;
+            board[x][y-1].hit = true;
             console.log(board);
             });
         }
@@ -19,18 +19,18 @@ for(let y = 0; y < 11; y++){
     }
 }
 
-const letters = ['J','I','H','G','F','E','D','C','B','A'];
+const letters = ['A','B','C','D','E','F','G','H','I','J'];
 const nums = ['1','2','3','4','5','6','7','8','9','10'];
 
 
 //adds letters to board rows
 for(let i=0; i<letters.length; i++) {
-    $(`.square-1-${i+1}`).text(letters[i]);
+    $(`.square-10-${i}`).text(letters[i]);
 }
 
 //adds numbers to board columns
 for(let j=0; j<nums.length; j++) {
-    $(`.square-${j+2}-11`).text(nums[j]);
+    $(`.square-${j}-10`).text(nums[j]);
 }
 
 var rotation = 0;
@@ -52,7 +52,7 @@ $('.rotate').click(function() {
 
 
 var board = [
-    [{name:"buddy"},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{},{},{},{}],
@@ -64,7 +64,7 @@ var board = [
     [{},{},{},{},{},{},{},{},{},{}]
 ];
 
-console.log(board[0][0]);
+console.log(board[9][9]);
 
 
 
