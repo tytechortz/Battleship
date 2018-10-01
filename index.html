@@ -27,7 +27,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
     $(function() {
-      $("#draggable1" ).draggable({ grid: [42,41.08], containment: "#droppable" });
+      $("#draggable1" ).draggable({ snap: ".square" });
       $("#draggable2" ).draggable({ grid: [42,41.09], containment: "#droppable" });
       $("#draggable3" ).draggable({ grid: [42,41.09], containment: "#droppable" });
       $("#draggable4" ).draggable({ grid: [42,41.09], containment: "#droppable" });
@@ -45,7 +45,7 @@
                 <div id="draggable1" class="draggable rotate ui-widget-content">
                     <!-- <p>snap</p> -->
                   </div> 
-                <div id="draggable2" class="draggable roatate ui-widget-content">
+                <div id="draggable2" class="draggable rotate ui-widget-content">
                     <!-- <p>snap</p> -->
                   </div>
                 <div id="draggable3" class="draggable rotate ui-widget-content">
@@ -65,9 +65,9 @@
 
       
 
-         <div class="mx-auto" style="width: 200px;">
+         <!-- <div class="mx-auto" style="width: 200px;">
                     <img src="images/smoke.gif"> 
-        </div>
+        </div> -->
 
         <div class="btn-toolbar position-buttons justify-content-md-center" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group mr-2" role="group" aria-label="First group">

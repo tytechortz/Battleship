@@ -1,9 +1,20 @@
-for(let y = 1; y < 12; y++){
-    $('.game').append(`<div class='game-column game-column-${y}'></div>`)
-    for(let x = 11; x > 0; x--){
-        const gameSquare = $('<div/>')
+for(let y = 0; y < 11; y++){
+    if (y > 0) {
+        $('.game').append(`<div class='game-column game-column-${y}'></div>`)
+    } else {
+        $('.game').append(`<div class='game-column'></div>`)
+    }
+    
+    for(let x = 0; x < 11; x++){
+        const gameSquare = $(`<div>${y},${x}</div>`)
         gameSquare.addClass('square')
-        gameSquare.addClass(`square-${y}-${x}`)
+        gameSquare.addClass('square')
+        if (x > 0) {
+            gameSquare.click(function() {
+            board[x-1, y-1].hit = true;
+            console.log(board);
+            });
+        }
         $(`.game-column-${y}`).append(gameSquare)
     }
 }
@@ -35,3 +46,25 @@ $('.rotate').click(function() {
     rotation += 90;
     $(this).rotate(rotation);
 });
+
+
+
+
+
+var board = [
+    [{name:"buddy"},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{},{},{},{}]
+];
+
+console.log(board[0][0]);
+
+
+
