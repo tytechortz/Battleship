@@ -1,5 +1,6 @@
 
 var player1Positions = [];
+var player1FiredAt = [];
 
 //initializes gameboard
 for(let y = 0; y < 12; y++){
@@ -55,7 +56,7 @@ for(let i=0; i<letters.length; i++) {
 for(let j=0; j<nums.length; j++) {
     $(`.square-${j}-10`).text(nums[j]);
 }
-
+// allows rotation of game pieces on double click
 var rotation = 0;
 
 jQuery.fn.rotate = function(degrees) {
@@ -65,13 +66,20 @@ jQuery.fn.rotate = function(degrees) {
                  'transform' : 'rotate('+ degrees +'deg)'});
 };
 
-$('.rotate').click(function() {
+$('.rotate').dblclick(function() {
     rotation += 90;
     $(this).rotate(rotation);
 });
 
-
-
+//firing buttons
+$( document ).ready(function() {        
+    $('#p1a').each(function() {
+            $(this).click(function() {        
+                 player1FiredAt.push($(this).val());
+                console.log(player1FiredAt);
+            }); 
+     });
+});
 
 
 var board = [

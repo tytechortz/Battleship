@@ -27,19 +27,24 @@
 
 #draggable1 {
     background-color: black;
+    opacity: .5;
 }
 
 #draggable2 {
     background-color: blue;
+    opacity: .5;
 }
 #draggable3 {
     background-color: red;
+    opacity: .5;
 }
 #draggable4 {
     background-color: green;
+    opacity: .5;
 }
 #draggable5 {
     background-color: violet;
+    opacity: .5;+
 }
 
 
