@@ -13,16 +13,16 @@ for(let y = 0; y < 12; y++){
     for(let x = 0; x < 11; x++){
         const gameSquare = $(`<div>${x},${y-1}</div>`)
         gameSquare.addClass('square')
-        gameSquare.addClass(`square-${y-1}-${x}`)
+        gameSquare.addClass(`square-${x}-${y-1}`)
         if (x < 10) {
             //creates new array of ship positions based on user clicking on squares
             gameSquare.click(function() {
-            board[x][y-1].setShip = true;
+            board[y-1][x].setShip = true;
             if (setShip = true) {
                 player1Positions.push(gameSquare);
                 console.log(player1Positions);
            }
-            $(`.square-${y-1}-${x}`).css('background-color', '#000000');
+            $(`.square-${x}-${y-1}`).css('background-color', '#000000');
             console.log(board);
             });
         }
