@@ -1,7 +1,7 @@
 
 var player1Positions = [];
 
-
+//initializes gameboard
 for(let y = 0; y < 12; y++){
     if (y > 0) {
         $('.game').append(`<div class='game-column game-column-${y}'></div>`)
@@ -14,6 +14,7 @@ for(let y = 0; y < 12; y++){
         gameSquare.addClass('square')
         gameSquare.addClass(`square-${y-1}-${x}`)
         if (x < 10) {
+            //creates new array of ship positions based on user clicking on squares
             gameSquare.click(function() {
             board[x][y-1].setShip = true;
             if (setShip = true) {
@@ -28,6 +29,11 @@ for(let y = 0; y < 12; y++){
         
     }
    
+}
+//adds id's to columns not in the playing area
+for(let i=0; i<11; i++) {
+    $(`.square-10-${i}`).attr('id', 'letter-column');
+    $(`.square-${i}-10`).attr('id', 'number-column');  
 }
 
 $('.game-column').droppable( {
