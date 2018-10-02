@@ -28,10 +28,10 @@
     <script>
     $(function() {
       $("#draggable1" ).draggable({ snap: ".square" });
-      $("#draggable2" ).draggable({ grid: [42,41.09], containment: "#droppable" });
-      $("#draggable3" ).draggable({ grid: [42,41.09], containment: "#droppable" });
-      $("#draggable4" ).draggable({ grid: [42,41.09], containment: "#droppable" });
-      $("#draggable5" ).draggable({ grid: [42,41.09], containment: "#droppable" });
+      $("#draggable2" ).draggable({ snap: ".square" , containment: "#droppable" });
+      $("#draggable3" ).draggable({ snap: ".square" , containment: "#droppable" });
+      $("#draggable4" ).draggable({ snap: ".square" , containment: "#droppable" });
+      $("#draggable5" ).draggable({ snap: ".square" , containment: "#droppable" });
     } );
     </script>
 </head>
@@ -63,8 +63,8 @@
         <div class="row">
           <div class="col">
               <div class="btn-toolbar position-buttons justify-content-md-center" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-secondary">A</button>
+                  <div class="btn-group mr-2" id="player-one-letters" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-secondary" id="p1a" value="">A</button>
                     <button type="button" class="btn btn-secondary">B</button>
                     <button type="button" class="btn btn-secondary">C</button>
                     <button type="button" class="btn btn-secondary">D</button>
@@ -77,7 +77,7 @@
                   </div>                    
             </div> 
             <div class="btn-toolbar position-buttons justify-content-md-center" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
+                <div class="btn-group mr-2" id="player-1-numbers" role="group" aria-label="First group">
                     <button type="button" class="btn btn-secondary">1</button>
                     <button type="button" class="btn btn-secondary">2</button>
                     <button type="button" class="btn btn-secondary">3</button>
@@ -96,7 +96,7 @@
          
           <div class="col">
               <div class="btn-toolbar position-buttons justify-content-md-center" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                  <div class="btn-group mr-2" id="player-2-letters" role="group" aria-label="First group">
                     <button type="button" class="btn btn-secondary">A</button>
                     <button type="button" class="btn btn-secondary">B</button>
                     <button type="button" class="btn btn-secondary">C</button>
@@ -110,7 +110,7 @@
                   </div>                    
               </div> 
               <div class="btn-toolbar position-buttons justify-content-md-center" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                  <div class="btn-group mr-2" id="player-2-numbers" role="group" aria-label="First group">
                       <button type="button" class="btn btn-secondary">1</button>
                       <button type="button" class="btn btn-secondary">2</button>
                       <button type="button" class="btn btn-secondary">3</button>
