@@ -3,6 +3,8 @@ var player1Positions = [];
 var player1FiredAt = [];
 
 //initializes gameboard
+
+
 for(let y = 0; y < 12; y++){
     if (y > 0) {
         $('.game').append(`<div class='game-column game-column-${y}'></div>`)
@@ -14,6 +16,8 @@ for(let y = 0; y < 12; y++){
         const gameSquare = $(`<div>${x},${y-1}</div>`)
         gameSquare.addClass('square')
         gameSquare.addClass(`square-${x}-${y-1}`)
+        gameSquare.attr('xCoordinate', x)
+        gameSquare.attr('yCoordinate', y-1)
         if (x < 10) {
             //creates new array of ship positions based on user clicking on squares
             gameSquare.click(function() {
@@ -71,15 +75,17 @@ $('.rotate').dblclick(function() {
     $(this).rotate(rotation);
 });
 
-//firing buttons
-$( document ).ready(function() {        
-    $('#p1a').each(function() {
-            $(this).click(function() {        
-                 player1FiredAt.push($(this).val());
-                console.log(player1FiredAt);
-            }); 
-     });
-});
+//firing buttons push values to player1FiredAt array
+       
+    $('#player-one-letters button').click(function() {       
+        player1FiredAt.push($(this).val());
+            console.log(player1FiredAt);
+            console.log(player1FiredAt[0]);
+            console.log(player1FiredAt[1]);
+    });
+
+      
+
 
 
 var board = [
@@ -95,7 +101,7 @@ var board = [
     [{},{},{},{},{},{},{},{},{},{}]
 ];
 
-console.log(board[9][9]);
+
 
 
 
