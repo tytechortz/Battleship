@@ -1,9 +1,4 @@
-#letter-column {
-    background-color: silver;
-}
-#number-column {
-    background-color: silver;
-}
+
 
 .square {
     height: 40px;
@@ -44,7 +39,12 @@
 }
 #draggable5 {
     background-color: violet;
-    opacity: .5;+
+    opacity: .5;
 }
 
-
+#number-column {
+    background-color: silver;
+}
+#letter-column {
+    background-color: silver;
+}
